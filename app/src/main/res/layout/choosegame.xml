@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ChooseGame">
+
+    <ViewAnimator
+        android:id="@+id/materiallayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#4CAF50"
+        android:elevation="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Choose Game Type"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="40dp"
+            android:id="@+id/gametype"
+            android:layout_marginTop="90dp"/>
+    </ViewAnimator>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/add"
+        android:src="@drawable/ic_plus_white_18dp"
+        android:background="@drawable/rectangle"
+        android:clickable="true"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:textColor="#ffffffff"
+        android:elevation="4dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_minus_white_18dp"
+        android:id="@+id/sub"
+        android:background="@drawable/rectangle"
+        android:clickable="true"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:textColor="#ffffffff"
+        android:elevation="4dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/mul"
+        android:src="@drawable/ic_multiplication_white_18dp"
+        android:background="@drawable/rectangle"
+        android:clickable="true"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:textColor="#ffffffff"
+        android:elevation="4dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/div"
+        android:src="@drawable/ic_division_white_18dp"
+        android:background="@drawable/rectangle"
+        android:clickable="true"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:textColor="#ffffffff"
+        android:elevation="4dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <ViewAnimator
+        android:id="@+id/material"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/materiallayer">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/question"
+            android:src="@drawable/ic_help_white_18dp"
+            android:background="@drawable/goldrectangle"
+            android:clickable="true"
+            android:textSize="@dimen/abc_action_bar_default_height_material"
+            android:textColor="#ffffffff"
+            android:elevation="4dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+    </ViewAnimator>
+
+
+
+</RelativeLayout>

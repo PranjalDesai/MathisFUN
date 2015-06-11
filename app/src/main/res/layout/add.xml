@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#FFFFFF"
+tools:context=".sub">
+
+<ViewAnimator
+    android:id="@+id/materiallayer"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#795548"
+    android:elevation="3dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose Difficulty"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#ffffffff"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="40sp"
+        android:id="@+id/gametype"
+        android:layout_marginTop="80dp"/>
+</ViewAnimator>
+<ImageButton
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/play_large"
+    android:background="@drawable/circle"
+    android:id="@+id/imageButton"
+    android:layout_gravity="right|bottom"
+    android:layout_marginLeft="270dp"
+    android:layout_marginTop="165dp"
+    android:elevation="8dp"/>
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/radioGroup"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="200dp"
+    android:gravity="center_horizontal"
+    android:checkedButton="1"
+    >
+
+    <CheckBox
+        android:button="@drawable/checkbox_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easy"
+        android:id="@+id/cb1"
+        android:layout_weight="0.27"
+        android:checked="false"
+        android:clickable="true"
+        android:onClick="onCheckboxClicked"
+        android:textColor="#F000"
+        android:layout_gravity="left"
+        android:layout_marginLeft="75dp"
+        android:textSize="40sp" />
+
+    <CheckBox
+        android:button="@drawable/checkbox_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:id="@+id/cb2"
+        android:layout_weight="0.27"
+        android:checked="false"
+        android:clickable="true"
+        android:onClick="onCheckboxClicked"
+        android:textColor="#F000"
+        android:layout_gravity="left"
+        android:layout_marginLeft="75dp"
+        android:textSize="40sp" />
+
+    <CheckBox
+        android:button="@drawable/checkbox_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hard"
+        android:id="@+id/cb3"
+        android:layout_weight="0.27"
+        android:checked="false"
+        android:clickable="true"
+        android:onClick="onCheckboxClicked"
+        android:textColor="#F000"
+        android:layout_gravity="left"
+        android:layout_marginLeft="75dp"
+        android:textSize="40sp" />
+</RadioGroup>
+
+</RelativeLayout>

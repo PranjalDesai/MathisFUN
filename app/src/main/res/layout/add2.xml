@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".add2">
+
+    <ViewAnimator
+        android:id="@+id/materiallayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#009688"
+        android:elevation="3dp">
+
+    </ViewAnimator>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/num1"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:elevation="5dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/num2"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:elevation="5dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:text="+"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/plus"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:elevation="5dp"/>
+    <EditText
+        android:layout_width="275dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/materiallayer"
+        android:layout_marginTop="15sp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/input"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter Answer"
+        android:textColorHint="#b2b2b2"
+        android:textSize="40dp"
+        android:textColor="#f00000"
+        android:layout_toStartOf="@+id/imageButton"
+        android:textAlignment="center"
+        android:maxLength="9"/>
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/materiallayer"
+        android:src="@drawable/ic_check_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton"
+        android:layout_gravity="right|bottom"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15sp"
+        android:elevation="8dp"
+        android:onClick="addition" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_play_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/play"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:onClick="play" />
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_pause_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/pause"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:onClick="pause" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/outcome"
+        android:layout_below="@+id/input"
+        android:textSize="34sp"
+        android:textColor="#F00000"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:hint="-" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerHorizontal="true"
+        android:textColor="#Ffffff"
+        android:layout_marginTop="50dp"
+        android:elevation="5dp"/>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#3F51B5</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#303f9f</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#3F51B5</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#4CAF50</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#388E3C</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#4CAF50</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme3" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#FFEB3B</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#FBC02D</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#FFEB3B</item>
+    </style>
+    <style name="AppTheme4" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#795548</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#5D4037</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#795548</item>
+    </style>
+    <style name="AppTheme5" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#673AB7</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#512DA8</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#673AB7</item>
+    </style>
+    <style name="AppTheme6" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#E91E63</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#C2185B</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#E91E63</item>
+    </style>
+    <style name="AppTheme7" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#00BCD4</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#0097A7</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#00BCD4</item>
+    </style>
+    <style name="AppTheme8" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary" tools:targetAp1="21">#009688</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">#00796B</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">#009688</item>
+    </style>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".subResult">
+
+    <ViewAnimator
+        android:id="@+id/materiallayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#4CAF50"
+        android:elevation="3dp">
+
+    </ViewAnimator>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total Score"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:elevation="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="50"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/materiallayer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:layout_alignParentTop="true"
+        android:elevation="5dp"
+        android:textColor="#ffffff"
+        android:textSize="112sp" />
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_share_variant_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton"
+        android:layout_gravity="right|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp"
+        android:elevation="8dp"
+        android:layout_below="@+id/materiallayer"
+        android:layout_toEndOf="@+id/textView"
+        android:onClick="share" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_trophy_award_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton2"
+        android:elevation="8dp"
+        android:onClick="onClick2"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_toStartOf="@+id/textView"
+        android:layout_marginRight="10dp" />
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_trophy_white_18dp"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton3"
+        android:elevation="8dp"
+        android:onClick="onClick"
+        android:layout_gravity="right|bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
