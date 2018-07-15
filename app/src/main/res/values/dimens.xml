@@ -1,5 +1,70 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="thirty_two">32dp</dimen>
+    <dimen name="sixty_four">64dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="three">3dp</dimen>
+    <dimen name="four">4dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="eighteen_sp">18sp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="ninety">90dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="two_fourty">240dp</dimen>
+    <dimen name="one_twenty">120dp</dimen>
+    <dimen name="sixty_eight_sp">68sp</dimen>
+
+    <dimen name="fourty">40dp</dimen>
+    <dimen name="twenty_two_sp">22sp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twenty_four">24dp</dimen>
+    <dimen name="twenty_four_sp">24sp</dimen>
+    <dimen name="twenty_eight_sp">28sp</dimen>
+
+    <dimen name="two_hundered">200dp</dimen>
+    <dimen name="two_fifty_dp">250dp</dimen>
+    <dimen name="three_sixty">360dp</dimen>
+    <dimen name="seventy_two">72dp</dimen>
+    <dimen name="seventy_two_sp">72sp</dimen>
+    <dimen name="forty_eight">48dp</dimen>
+    <dimen name="eighty_five">85dp</dimen>
+    <dimen name="eighteen">18dp</dimen>
+    <dimen name="twenty_two">22dp</dimen>
+    <dimen name="fourteen_sp">14sp</dimen>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="fourty_four_sp">44sp</dimen>
+    <dimen name="four_hundered">400dp</dimen>
+    <dimen name="thirty_six_sp">36sp</dimen>
+    <dimen name="eighty">80dp</dimen>
+    <dimen name="thirty_six">36dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+
+    <dimen name="three_hundered">300dp</dimen>
+    <dimen name="three_fifty">350dp</dimen>
+    <dimen name="one_thirty_fiv">135dp</dimen>
+    <dimen name="thirty_two_sp">32sp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="one_twenty_four_sp">124sp</dimen>
+    <dimen name="fifty_six_sp">56sp</dimen>
+    <dimen name="three_thirty">330dp</dimen>
+    <dimen name="two_sixty_five">265dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="two">2dp</dimen>
+    <dimen name="ninety_six">96dp</dimen>
+    <dimen name="fifty_two">52dp</dimen>
+    <dimen name="two_thirty_four">234dp</dimen>
+    <dimen name="one_ninety_three">193dp</dimen>
+    <dimen name="ninety_two">92dp</dimen>
+    <dimen name="fifty_four">54dp</dimen>
+    <dimen name="forty_eight_sp">48sp</dimen>
+    <dimen name="ninety_sp">90sp</dimen>
+    <dimen name="hundred">100dp</dimen>
+    <dimen name="one_fifty">150dp</dimen>
+    <dimen name="seventy_five">75dp</dimen>
+    <dimen name="one_seventy_five">175dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="one_eighty">180dp</dimen>
 </resources>

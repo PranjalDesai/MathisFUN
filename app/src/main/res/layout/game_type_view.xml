@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/sixteen"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/gameTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sixteen"
+        android:layout_marginTop="@dimen/sixteen"
+        android:text="Choose game type"
+        android:textSize="@dimen/eighteen_sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/sixteen"
+        android:layout_marginStart="@dimen/sixteen"
+        android:layout_marginTop="@dimen/sixteen"
+        app:chipSpacing="@dimen/sixteen"
+        android:id="@+id/gameTypeChipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameTypeTitle"
+        app:singleSelection="true">
+
+        <android.support.design.chip.Chip
+            android:id="@+id/add_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/plus"
+            app:chipIconEnabled="true"
+            app:chipText="Add"
+            app:iconStartPadding="@dimen/four"
+            app:chipStrokeColor="@color/chip_game_normal_state"
+            app:chipStrokeWidth="@dimen/four"
+            app:chipBackgroundColor="@color/colorSecondary"/>
+
+        <android.support.design.chip.Chip
+            android:id="@+id/sub_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/minus"
+            app:chipIconEnabled="true"
+            app:chipText="Subtract"
+            app:iconStartPadding="@dimen/four"
+            app:chipStrokeColor="@color/chip_game_normal_state"
+            app:chipStrokeWidth="@dimen/four"
+            app:chipBackgroundColor="@color/colorSecondary"/>
+
+        <android.support.design.chip.Chip
+            android:id="@+id/mys_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/help"
+            app:chipIconEnabled="true"
+            app:chipText="Mystery"
+            app:iconStartPadding="@dimen/four"
+            app:chipStrokeColor="@color/chip_game_mys_state"
+            app:chipStrokeWidth="@dimen/four"
+            app:chipBackgroundColor="@color/colorYellow"/>
+
+        <android.support.design.chip.Chip
+            android:id="@+id/mul_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/close"
+            app:chipIconEnabled="true"
+            app:chipText="Multiply"
+            app:iconStartPadding="@dimen/four"
+            app:chipStrokeColor="@color/chip_game_normal_state"
+            app:chipStrokeWidth="@dimen/four"
+            app:chipBackgroundColor="@color/colorSecondary"/>
+
+        <android.support.design.chip.Chip
+            android:id="@+id/div_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/division"
+            app:chipIconEnabled="true"
+            app:chipText="Division"
+            app:iconStartPadding="@dimen/four"
+            app:chipStrokeColor="@color/chip_game_normal_state"
+            app:chipStrokeWidth="@dimen/four"
+            app:chipBackgroundColor="@color/colorSecondary"/>
+
+    </android.support.design.chip.ChipGroup>
+
+
+</android.support.constraint.ConstraintLayout>

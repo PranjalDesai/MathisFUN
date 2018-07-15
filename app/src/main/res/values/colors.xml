@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorSecondary">#03DAC4</color>
+    <color name="colorSecondaryLight">#A7FFFA</color>
+    <color name="colorSecondaryDark">#00B396</color>
+    <color name="colorPrimary">#4768fd</color>
+    <color name="colorPrimaryLight">#3c54fe</color>
+    <color name="colorRed">#d32f2f</color>
+    <color name="colorRedLight">#ff6659</color>
+    <color name="colorRedDark">#9a0007</color>
+    <color name="colorDeepOrange">#ff5722</color>
+    <color name="colorDeepOrangeLight">#ff8a50</color>
+    <color name="colorDeepOrangeDark">#c41c00</color>
+    <color name="colorYellow">#fbc02d</color>
+    <color name="colorGreen">#4caf50</color>
+    <color name="colorGreenDark">#087f23</color>
+    <color name="colorGreenLight">#80e27e</color>
+    <color name="colorPurple">#9c27b0</color>
+    <color name="colorDeepPurple">#673ab7</color>
+    <color name="colorYellowLight">#fff263</color>
+    <color name="colorYellowDark">#c49000</color>
+    <color name="colorOrange">#fb8c00</color>
+    <color name="colorOrangeLight">#ffbd45</color>
+    <color name="colorOrangeDark">#c25e00</color>
+    <color name="colorPrimaryDark">#3c54fe</color>
+    <color name="colorAccent">#e91e63</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#757575</color>
+    <color name="divider">#1FFFFFFF</color>
+
+</resources>

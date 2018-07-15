@@ -1,8 +1,32 @@
 <resources>
-    <string name="app_name">Math is FUN</string>
+    <string name="app_name">Math is Fun!</string>
+    <string name="game_type">gameType</string>
+    <string name="play_game">playGame</string>
+    <string name="choose_game">Choose Game</string>
+    <string name="index_card">indexCard</string>
+    <string name="choose_index">Choose Index</string>
+    <string name="type_error">Please select type</string>
+    <string name="difficulty_error">Please select difficulty type</string>
+    <string name="add">add</string>
+    <string name="subtract">subtract</string>
+    <string name="mystery">mystery</string>
+    <string name="multiply">multiply</string>
+    <string name="divide">divide</string>
+    <string name="easy">easy</string>
+    <string name="medium">medium</string>
+    <string name="hard">hard</string>
+    <string name="type">type</string>
+    <string name="difficulty">difficulty</string>
+    <string name="answer_error">Incorrect Answer</string>
+    <string name="continue_game">Press Play to continue game</string>
+    <string name="results">results</string>
+    <string name="correctAnswers">correctAnswers</string>
+    <string name="sign_in_success">Sign In successful!</string>
+    <string name="something_went_wrong">Oops something went wrong!</string>
+    <string name="sign_out_success">Sign Out successful!</string>
+    <string name="share">Share using</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="gameTitle">MATH is FUN</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="sec_left">60 seconds left</string>
+    <string name="play_button">play_button</string>
+    60 seconds left
 </resources>

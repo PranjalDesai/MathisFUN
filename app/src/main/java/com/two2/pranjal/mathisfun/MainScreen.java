@@ -2,110 +2,143 @@ package com.two2.pranjal.mathisfun;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+
+
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.plus.Plus;
-import com.google.example.games.basegameutils.BaseGameActivity;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 
-public class MainScreen extends BaseGameActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+
+public class MainScreen extends AppCompatActivity {
+    private GoogleSignInClient mGoogleSignInClient = null;
+    private GoogleSignInAccount mGoogleSignInAccount= null;
+    private static final int RC_SIGN_IN = 9001;
+
+    @BindView(R.id.sign_in_button)
+    SignInButton signInButton;
+    @BindView(R.id.sign_out_button)
+    Button signOutButton;
+    @BindView(R.id.play)
+    CardView playCard;
+    @BindView(R.id.index)
+    CardView indexCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-        Button play= (Button)findViewById(R.id.play);
-        play.setOnClickListener(new View.OnClickListener() {
+        ButterKnife.bind(this);
+
+        playCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start = new Intent(MainScreen.this, ChooseGame.class);
-                start.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                start.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(start);
+                Intent intent= new Intent(MainScreen.this, ChooseGame.class);
+                intent.putExtra(getResources().getString(R.string.game_type), getResources().getString(R.string.play_game));
+                startActivity(intent);
             }
         });
-        Button index= (Button)findViewById(R.id.index);
-        index.setOnClickListener(new View.OnClickListener() {
+
+        indexCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start2 = new Intent(MainScreen.this, ChooseIndex.class);
-                start2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                start2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(start2);
+                Intent intent= new Intent(MainScreen.this, ChooseGame.class);
+                intent.putExtra(getResources().getString(R.string.game_type), getResources().getString(R.string.index_card));
+                startActivity(intent);
             }
         });
-        findViewById(R.id.sign_in_button).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override public void onClick(View v) {
-                        // start the asynchronous sign in flow
-                        beginUserInitiatedSignIn();
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSignInIntent();
+            }
+        });
+
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSignOutIntent();
+            }
+        });
+    }
+
+    private void startSignOutIntent(){
+        mGoogleSignInClient.signOut();
+        signOutButton.setVisibility(View.GONE);
+        signInButton.setVisibility(View.VISIBLE);
+        Snackbar.make(findViewById(R.id.mainScreen),getResources().getString(R.string.sign_out_success),Snackbar.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        signInSilently();
+    }
+
+    private void signInSilently() {
+        mGoogleSignInClient = GoogleSignIn.getClient(this,
+                GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
+        mGoogleSignInClient.silentSignIn().addOnCompleteListener(this,
+                new OnCompleteListener<GoogleSignInAccount>() {
+                    @Override
+                    public void onComplete(@NonNull Task<GoogleSignInAccount> task) {
+                        if (task.isSuccessful()) {
+                            // The signed in account is stored in the task's result.
+                            mGoogleSignInAccount = task.getResult();
+                            signOutButton.setVisibility(View.VISIBLE);
+                            signInButton.setVisibility(View.GONE);
+                            Snackbar.make(findViewById(R.id.mainScreen),getResources().getString(R.string.sign_in_success),Snackbar.LENGTH_LONG).show();
+                        } else {
+                            // Player will need to sign-in explicitly using via UI
+                            signOutButton.setVisibility(View.GONE);
+                            signInButton.setVisibility(View.VISIBLE);
+                        }
                     }
                 });
-        findViewById(R.id.sign_out_button).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override public void onClick(View v) {
-                        // User initiated sign out...
-                        signOut();
-                        setViewVisibility();
-                    }
-                });
-
     }
 
-    public void onClick(View v) {
-        Plus.AccountApi.clearDefaultAccount(getApiClient());
-        getApiClient().disconnect();
+    private void startSignInIntent() {
+        GoogleSignInClient signInClient = GoogleSignIn.getClient(this,
+                GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
+        Intent intent = signInClient.getSignInIntent();
+        startActivityForResult(intent, RC_SIGN_IN);
     }
 
-    public void setViewVisibility() {
-        if (isSignedIn()) {
-            findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
-            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
-        } else {
-            findViewById(R.id.sign_out_button).setVisibility(View.GONE);
-            findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            if (result.isSuccess()) {
+                mGoogleSignInAccount = result.getSignInAccount();
+                signOutButton.setVisibility(View.VISIBLE);
+                signInButton.setVisibility(View.GONE);
+                Snackbar.make(findViewById(R.id.mainScreen),getResources().getString(R.string.sign_in_success),Snackbar.LENGTH_LONG).show();
+            } else {
+                String message = result.getStatus().getStatusMessage();
+                if (message == null || message.isEmpty()) {
+                    message = getResources().getString(R.string.something_went_wrong);
+                }
+                Snackbar.make(findViewById(R.id.mainScreen),message,Snackbar.LENGTH_LONG).show();
+                signOutButton.setVisibility(View.VISIBLE);
+            }
         }
-    }
-
-    @Override
-    public void onSignInFailed() {
-        setViewVisibility();
-    }
-
-    @Override
-    public void onSignInSucceeded() {
-        setViewVisibility();
-    }
-    public MainScreen() {
-        super(CLIENT_GAMES | CLIENT_PLUS);
-    }
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_screen, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
