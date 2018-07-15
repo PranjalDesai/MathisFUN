@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'MMIF'
-            keyPassword 'badwolf900'
+            keyAlias ''
+            keyPassword ''
             storeFile file('../app/keystore/materialkeystore.jks')
-            storePassword 'badwolf900'
+            storePassword ''
         }
     }
     compileSdkVersion 28
@@ -15,7 +15,7 @@ android {
         applicationId "com.two2.pranjal.mathisfun"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 10
+        versionCode 11
         versionName '3.0'
     }
     buildTypes {
