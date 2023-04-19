@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.card.MaterialCardView android:layout_width="match_parent"
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
     android:layout_height="@dimen/three_sixty"
     android:id="@+id/back_layout"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -15,4 +15,4 @@
         android:textSize="@dimen/seventy_two_sp"
         android:padding="@dimen/sixteen"/>
 
-</android.support.design.card.MaterialCardView>
+</com.google.android.material.card.MaterialCardView>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/sixteen"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/difficultyTitle"
         app:singleSelection="true">
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/easy_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorGreenLight"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/med_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorYellowLight"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/hard_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -81,4 +81,4 @@
 
     </android.support.design.chip.ChipGroup>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

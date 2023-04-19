@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/sixteen"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/gameTypeTitle"
         app:singleSelection="true">
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/add_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorSecondary"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/sub_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorSecondary"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/mys_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorYellow"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/mul_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             app:chipStrokeWidth="@dimen/four"
             app:chipBackgroundColor="@color/colorSecondary"/>
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/div_chip"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
@@ -114,4 +114,4 @@
     </android.support.design.chip.ChipGroup>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
