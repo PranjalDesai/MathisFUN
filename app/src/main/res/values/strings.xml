@@ -28,5 +28,6 @@
 
     <string name="sec_left">60 seconds left</string>
     <string name="play_button">play_button</string>
+    <string name="title_activity_main">MainActivity</string>
     60 seconds left
 </resources>

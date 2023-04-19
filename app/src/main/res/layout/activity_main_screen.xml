@@ -1,112 +1,112 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/mainScreen"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorDeepPurple"
-    tools:context=".MainScreen">
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:id="@+id/mainScreen"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:background="@color/colorDeepPurple"-->
+<!--    tools:context=".MainScreen">-->
 
 
-    <TextView
-        android:id="@+id/gameName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight"
-        android:layout_marginStart="@dimen/eight"
-        android:layout_marginTop="@dimen/thirty_two"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white"
-        android:textSize="@dimen/fifty_six_sp"
-        android:textStyle="bold"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/gameName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/eight"-->
+<!--        android:layout_marginStart="@dimen/eight"-->
+<!--        android:layout_marginTop="@dimen/thirty_two"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/fifty_six_sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:typeface="sans"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="@dimen/two_hundered"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight"
-        android:layout_marginStart="@dimen/eight"
-        android:layout_marginTop="@dimen/sixteen"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/index" />
+<!--    <com.google.android.gms.common.SignInButton-->
+<!--        android:id="@+id/sign_in_button"-->
+<!--        android:layout_width="@dimen/two_hundered"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/eight"-->
+<!--        android:layout_marginStart="@dimen/eight"-->
+<!--        android:layout_marginTop="@dimen/sixteen"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/index" />-->
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/sixteen"
-        android:layout_marginStart="@dimen/sixteen"
-        android:layout_marginTop="@dimen/sixty_four"
-        app:cardCornerRadius="@dimen/twenty"
-        android:id="@+id/play"
-        android:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameName">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/sixteen"-->
+<!--        android:layout_marginStart="@dimen/sixteen"-->
+<!--        android:layout_marginTop="@dimen/sixty_four"-->
+<!--        app:cardCornerRadius="@dimen/twenty"-->
+<!--        android:id="@+id/play"-->
+<!--        android:backgroundTint="@color/colorPrimaryDark"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/gameName">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PLAY"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="@dimen/fourty_four_sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:padding="@dimen/sixteen"/>
-    </androidx.cardview.widget.CardView>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="PLAY"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="@dimen/fourty_four_sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:padding="@dimen/sixteen"/>-->
+<!--    </androidx.cardview.widget.CardView>-->
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/index"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/sixteen"
-        android:layout_marginStart="@dimen/sixteen"
-        android:layout_marginTop="@dimen/sixteen"
-        android:backgroundTint="@color/colorGreen"
-        app:cardCornerRadius="@dimen/twenty"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/index"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/sixteen"-->
+<!--        android:layout_marginStart="@dimen/sixteen"-->
+<!--        android:layout_marginTop="@dimen/sixteen"-->
+<!--        android:backgroundTint="@color/colorGreen"-->
+<!--        app:cardCornerRadius="@dimen/twenty"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/play">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="@dimen/sixteen"
-            android:text="INDEX CARDS"
-            android:textColor="@color/white"
-            android:textSize="@dimen/fourty_four_sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="@dimen/sixteen"-->
+<!--            android:text="INDEX CARDS"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/fourty_four_sp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </androidx.cardview.widget.CardView>-->
 
-    <Button
-        android:id="@+id/sign_out_button"
-        android:layout_width="@dimen/two_hundered"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/eight"
-        android:layout_marginStart="@dimen/eight"
-        android:layout_marginTop="@dimen/sixteen"
-        android:background="@color/white"
-        android:contentDescription="Sign Out"
-        android:drawableLeft="@drawable/ic_google_logo"
-        android:drawablePadding="@dimen/twelve"
-        android:elevation="@dimen/two"
-        android:paddingLeft="@dimen/twelve"
-        android:text="Sign Out"
-        android:visibility="gone"
-        android:textColor="@color/black"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/index" />
+<!--    <Button-->
+<!--        android:id="@+id/sign_out_button"-->
+<!--        android:layout_width="@dimen/two_hundered"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/eight"-->
+<!--        android:layout_marginStart="@dimen/eight"-->
+<!--        android:layout_marginTop="@dimen/sixteen"-->
+<!--        android:background="@color/white"-->
+<!--        android:contentDescription="Sign Out"-->
+<!--        android:drawableLeft="@drawable/ic_google_logo"-->
+<!--        android:drawablePadding="@dimen/twelve"-->
+<!--        android:elevation="@dimen/two"-->
+<!--        android:paddingLeft="@dimen/twelve"-->
+<!--        android:text="Sign Out"-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/index" />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

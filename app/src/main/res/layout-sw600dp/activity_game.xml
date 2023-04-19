@@ -1,206 +1,206 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:timer="http://schemas.android.com/apk/res-auto"
-    tools:context=".GameActivity">
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:timer="http://schemas.android.com/apk/res-auto"-->
+<!--    tools:context=".GameActivity">-->
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayoutPlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"
-        android:background="@color/colorPrimary">
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayoutPlay"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="visible"-->
+<!--        android:background="@color/colorPrimary">-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/play_button"
-            android:layout_width="@dimen/two_fourty"
-            android:layout_height="@dimen/two_fourty"
-            android:layout_marginBottom="@dimen/eight"
-            android:layout_marginEnd="@dimen/eight"
-            android:layout_marginStart="@dimen/eight"
-            android:layout_marginTop="@dimen/eight"
-            android:backgroundTint="@color/colorRed"
-            app:cardCornerRadius="@dimen/one_twenty"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/play_button"-->
+<!--            android:layout_width="@dimen/two_fourty"-->
+<!--            android:layout_height="@dimen/two_fourty"-->
+<!--            android:layout_marginBottom="@dimen/eight"-->
+<!--            android:layout_marginEnd="@dimen/eight"-->
+<!--            android:layout_marginStart="@dimen/eight"-->
+<!--            android:layout_marginTop="@dimen/eight"-->
+<!--            android:backgroundTint="@color/colorRed"-->
+<!--            app:cardCornerRadius="@dimen/one_twenty"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/play_button"
-                android:src="@drawable/play" />
-        </androidx.cardview.widget.CardView>
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:contentDescription="@string/play_button"-->
+<!--                android:src="@drawable/play" />-->
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <TextView
-            android:id="@+id/time_left_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/eight"
-            android:layout_marginStart="@dimen/eight"
-            android:layout_marginTop="@dimen/sixty_four"
-            android:text="@string/sec_left"
-            android:textColor="@color/white"
-            android:textSize="@dimen/fourty_four_sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/play_button" />
+<!--        <TextView-->
+<!--            android:id="@+id/time_left_play"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/eight"-->
+<!--            android:layout_marginStart="@dimen/eight"-->
+<!--            android:layout_marginTop="@dimen/sixty_four"-->
+<!--            android:text="@string/sec_left"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/fourty_four_sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/play_button" />-->
 
-        <TextView
-            android:id="@+id/description_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/sixty_four"
-            android:layout_marginEnd="@dimen/eight"
-            android:layout_marginStart="@dimen/eight"
-            android:text="Press Play to start"
-            android:textColor="@color/white"
-            android:textSize="@dimen/fourty_four_sp"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/play_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        android:id="@+id/constraintLayoutGame"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutPlay"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/three_hundered"
-            android:elevation="@dimen/four"
-            android:background="@color/colorPrimary">
-
-            <io.github.krtkush.lineartimer.LinearTimerView
-                android:id="@+id/linearTimerView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/twelve"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                timer:initialColor="@color/colorGreen"
-                timer:progressColor="@color/colorRed"
-                timer:radius="@dimen/thirty"
-                timer:startingPoint="270"
-                timer:strokeWidth="@dimen/four" />
-
-            <TextView
-                android:id="@+id/countDownTimerView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/eight"
-                android:layout_marginEnd="@dimen/eight"
-                android:layout_marginStart="@dimen/eight"
-                android:layout_marginTop="@dimen/eight"
-                android:elevation="@dimen/eight"
-                android:text="Paused"
-                android:textSize="@dimen/thirty_two_sp"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/linearTimerView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/linearTimerView" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/sixteen"
-                android:layout_marginEnd="@dimen/eight"
-                android:layout_marginStart="@dimen/eight"
-                android:layout_marginTop="@dimen/sixteen"
-                android:gravity="center"
-                android:text="300 + 300"
-                android:id="@+id/questionText"
-                android:textColor="@color/white"
-                android:textSize="@dimen/fifty_six_sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearTimerView" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/description_play"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="@dimen/sixty_four"-->
+<!--            android:layout_marginEnd="@dimen/eight"-->
+<!--            android:layout_marginStart="@dimen/eight"-->
+<!--            android:text="Press Play to start"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/fourty_four_sp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/play_button"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/answerInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
-            android:layout_width="@dimen/zero"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/thirty_two"
-            android:layout_marginStart="@dimen/thirty_two"
-            android:layout_marginTop="@dimen/twenty_four"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:counterMaxLength="5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/answerInputEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter answer"
-                android:inputType="number"
-                android:maxLength="5"
-                android:textSize="@dimen/twenty_four_sp"
-                android:textColorHint="@color/colorPrimary" />
-        </com.google.android.material.textfield.TextInputLayout>
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/constraintLayoutGame"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutPlay"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0">-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/submitBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/eight"
-            android:layout_marginStart="@dimen/eight"
-            android:layout_marginTop="@dimen/four"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:padding="@dimen/sixteen"
-            android:text="Submit"
-            android:textColor="@color/white"
-            android:textSize="@dimen/thirty_two_sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/answerInputLayout" />
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/constraintLayout3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/three_hundered"-->
+<!--            android:elevation="@dimen/four"-->
+<!--            android:background="@color/colorPrimary">-->
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/four"
-            android:layout_marginEnd="@dimen/sixteen"
-            app:elevation="@dimen/eight"
-            android:elevation="@dimen/eight"
-            android:backgroundTint="@color/colorRed"
-            android:src="@drawable/pause"
-            android:id="@+id/pauseBtn"
-            app:layout_constraintBottom_toTopOf="@+id/answerInputLayout"
-            app:layout_constraintEnd_toEndOf="parent" />
+<!--            <io.github.krtkush.lineartimer.LinearTimerView-->
+<!--                android:id="@+id/linearTimerView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="@dimen/twelve"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                timer:initialColor="@color/colorGreen"-->
+<!--                timer:progressColor="@color/colorRed"-->
+<!--                timer:radius="@dimen/thirty"-->
+<!--                timer:startingPoint="270"-->
+<!--                timer:strokeWidth="@dimen/four" />-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/countDownTimerView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/eight"-->
+<!--                android:layout_marginEnd="@dimen/eight"-->
+<!--                android:layout_marginStart="@dimen/eight"-->
+<!--                android:layout_marginTop="@dimen/eight"-->
+<!--                android:elevation="@dimen/eight"-->
+<!--                android:text="Paused"-->
+<!--                android:textSize="@dimen/thirty_two_sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/linearTimerView"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/linearTimerView" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/sixteen"-->
+<!--                android:layout_marginEnd="@dimen/eight"-->
+<!--                android:layout_marginStart="@dimen/eight"-->
+<!--                android:layout_marginTop="@dimen/sixteen"-->
+<!--                android:gravity="center"-->
+<!--                android:text="300 + 300"-->
+<!--                android:id="@+id/questionText"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/fifty_six_sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/linearTimerView" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/answerInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"-->
+<!--            android:layout_width="@dimen/zero"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/thirty_two"-->
+<!--            android:layout_marginStart="@dimen/thirty_two"-->
+<!--            android:layout_marginTop="@dimen/twenty_four"-->
+<!--            app:boxStrokeColor="@color/colorPrimary"-->
+<!--            app:counterMaxLength="5"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/answerInputEditText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Enter answer"-->
+<!--                android:inputType="number"-->
+<!--                android:maxLength="5"-->
+<!--                android:textSize="@dimen/twenty_four_sp"-->
+<!--                android:textColorHint="@color/colorPrimary" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/submitBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginEnd="@dimen/eight"-->
+<!--            android:layout_marginStart="@dimen/eight"-->
+<!--            android:layout_marginTop="@dimen/four"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="@dimen/sixteen"-->
+<!--            android:text="Submit"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/thirty_two_sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/answerInputLayout" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="@dimen/four"-->
+<!--            android:layout_marginEnd="@dimen/sixteen"-->
+<!--            app:elevation="@dimen/eight"-->
+<!--            android:elevation="@dimen/eight"-->
+<!--            android:backgroundTint="@color/colorRed"-->
+<!--            android:src="@drawable/pause"-->
+<!--            android:id="@+id/pauseBtn"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/answerInputLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
-    android:layout_height="@dimen/three_sixty"
-    android:id="@+id/back_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"-->
+<!--    android:layout_height="@dimen/three_sixty"-->
+<!--    android:id="@+id/back_layout"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/backAnswer"
-        android:layout_gravity="center"
-        android:text="999"
-        android:textColor="@color/colorDeepPurple"
-        android:textStyle="bold"
-        android:textSize="@dimen/seventy_two_sp"
-        android:padding="@dimen/sixteen"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/backAnswer"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="999"-->
+<!--        android:textColor="@color/colorDeepPurple"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="@dimen/seventy_two_sp"-->
+<!--        android:padding="@dimen/sixteen"/>-->
 
-</com.google.android.material.card.MaterialCardView>
+<!--</com.google.android.material.card.MaterialCardView>-->
